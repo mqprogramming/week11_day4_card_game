@@ -29,17 +29,9 @@ public class Deck {
         return this.cards;
     }
 
-    public void deal(Player player) {
+    public Card topCard() {
         Card takenCard = this.cards.remove(0);
-        System.out.println(takenCard);
-        player.addCard(takenCard);
+        return takenCard;
     }
 
-    public Player findWinner(Player player1, Player player2) {
-        if(player1.getCard().getValue() >= player2.getCard().getValue()){
-            return player1;
-        }else{
-            return player2;
-        }
-    }
 }

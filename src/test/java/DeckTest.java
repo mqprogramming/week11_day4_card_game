@@ -42,17 +42,8 @@ public class DeckTest {
     public void canDealACard(){
         deck.populate();
         deck.shuffle();
-        deck.deal(player1);
+        player1.twist(deck);
         assertEquals(1,player1.cardsCount());
     }
 
-    @Test
-    public void canAPlayerWin(){
-        deck.populate();
-        deck.shuffle();
-        deck.deal(player1);
-        deck.deal(player2);
-        Player result = deck.findWinner(player1,player2);
-        assertTrue(result != null);
-    }
 }
